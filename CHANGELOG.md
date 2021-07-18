@@ -6,6 +6,10 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [4.12.3] - 2021-07-18
+### Changed
+Fixed ECS architecture diagram
+
 ## [4.12.2] - 2021-01-10
 ### Added
 Resources page for the wiki

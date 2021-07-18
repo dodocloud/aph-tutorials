@@ -40,12 +40,13 @@ import styles from '@site/src/css/docs.module.scss';
 - **ECS.Engine**
   - entry point to the library, accepts a configuration object and initializes PIXI game loop
 - **ECS.Scene**
-  - scene manager, provides querying of components and game objects, manages global components
+  - a scene manager, provides querying of components and game objects, manages global components
 - **ECS.Component**
   - functional components of game objects
   - global components are attached to the `stage` object
 - **ECS.GameObject**
   - an interface that declares extension methods for PIXI containers
+  - in older versions, all components and the `Scene` worked with the containers through `GameObject` interface and accessing PIXI attributes required to use casting functions such as ˙asContainer()˙. The current version uses inherited ˙ECS.Container˙, so that it is possible to access both `ECS` and `PIXI` functions at the same time. `GameObject` interface is now only used internally for derived objects to force them to implement all `ECS` functions
 - **ECS.GameObjectProxy**
   - a delegate that contains implementation of methods in `ECS.GameObject` interface. It's used as a proxy by respective containers (because JavaScript doesn't have multi-inheritance facility)
 - **ECS.Container, ECS.Sprite,...**
